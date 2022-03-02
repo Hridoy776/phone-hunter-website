@@ -68,11 +68,11 @@ const displayDetails =details =>{
            <h4 class="card-title">${details.name}</h4>
            <h5 class="card-title">${details.releaseDate ? details.releaseDate:'release date not found' }</h5>
            <p class="card-text"><strong>Chipset:</strong>${details.mainFeatures.chipSet},<strong>Display:</strong>${details.mainFeatures.displaySize},<strong>Memory:</strong>${details.mainFeatures.memory}</p>
-           <p class="card-text"><strong>Sensors:</strong>${details.mainFeatures.sensors[0]},${details.mainFeatures.sensors[1]},
-           ${details.mainFeatures.sensors[2]},
-           ${details.mainFeatures.sensors[3]},
-           ${details.mainFeatures.sensors[4]},
-           ${details.mainFeatures.sensors[5]}</p>
+           <p class="card-text"><strong>Sensors:</strong>${details.mainFeatures.sensors[0]},${details?.mainFeatures?.sensors[1] ? details?.mainFeatures?.sensors[1]:'not found'},
+           ${details?.mainFeatures?.sensors[2] ? details?.mainFeatures?.sensors[2]:"" },
+           ${details?.mainFeatures?.sensors[3] ? details?.mainFeatures?.sensors[3]:"" },
+           ${details?.mainFeatures?.sensors[4] ? details?.mainFeatures?.sensors[4]:""},
+           ${details?.mainFeatures?.sensors[5] ? details?.mainFeatures?.sensors[5]:""}</p>
            <p class="card-text"><strong>Others:</strong>${details?.others?.Bluetooth ? details?.others?.Bluetooth:'not found'},${details?.others?.GPS ? details?.others?.GPS:''}.${details?.others?.NFC ? details?.others?.NFC:''},${details?.others?.Radio ? details?.others?.Radio:''},${details?.others?.USB ? details?.others?.USB:''},${details?.others?.WLAN ? details?.others?.WLAN:''}</p>
          </div>
     </div>
