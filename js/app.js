@@ -39,9 +39,11 @@ function displayPhones(phones) {
             `;
             divContainer.appendChild(container);
         });
+        document.getElementById('error-massage').style.display ="none"
     }
     else{
-        alert('hello')
+        document.getElementById('error-massage').style.display = "block"
+        
     }
 }
 
